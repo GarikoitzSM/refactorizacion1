@@ -48,7 +48,31 @@ public class CalculadoraMain {
 
     public static void calculos(Scanner sc, Calculadora calcu){
         System.out.println("Seleccione su operación. \n1: Suma\n2: Resta\n3: Multiplicación\n4: División\n5: Potencia\n6: Raíz");
-        
+        int eleccionCalculo = sc.nextInt();
+        switch (eleccionCalculo) {
+            case 1:
+            calcu.suma();
+            break;
+            case 2:
+            calcu.resta();
+            break;
+            case 3:
+            calcu.divi();
+            break;
+            case 4:
+            try{
+            calcu.divi();
+            } catch (ArithmeticException e) {
+                System.out.println("División entre cero. Error.");
+            }
+            break;
+            case 5:
+            calcu.poten();
+            break;
+            case 6:
+            calcu.raiz();
+            break;
+        }
 
     }
 }
