@@ -1,6 +1,6 @@
 package EjercicioCalc;
 
-public class Calculadora {
+class Calculadora {
         private double numero1;
         private double numero2;
 
