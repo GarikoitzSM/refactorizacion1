@@ -1,8 +1,6 @@
 package EjercicioCalc;
 import java.util.Scanner;
 
-import EjercicioCalc.Calculadora;
-
 public class CalculadoraMain {
     public static void main(String[] args) {
 
@@ -26,12 +24,11 @@ public class CalculadoraMain {
                 calculos(sc, calcu);
                 }
                 break;
-
+                case 3:
+                System.out.println("Gracias por utilizar este programa.");
+                return;
             }
         } while (programa);
-
-        
-
         sc.close();
     }
 
@@ -51,27 +48,29 @@ public class CalculadoraMain {
         int eleccionCalculo = sc.nextInt();
         switch (eleccionCalculo) {
             case 1:
-            calcu.suma();
+            System.out.println(calcu.suma());
             break;
             case 2:
-            calcu.resta();
+            System.out.println(calcu.resta());
             break;
             case 3:
-            calcu.divi();
+            System.out.println(calcu.divi());
             break;
             case 4:
             try{
-            calcu.divi();
+                System.out.println(calcu.divi());
             } catch (ArithmeticException e) {
                 System.out.println("División entre cero. Error.");
             }
             break;
             case 5:
-            calcu.poten();
+            System.out.println(calcu.poten());
             break;
             case 6:
-            calcu.raiz();
+            System.out.println(calcu.raiz());
             break;
+            default:
+            System.out.println("Opción invalida.");
         }
 
     }

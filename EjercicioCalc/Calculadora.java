@@ -1,5 +1,4 @@
 package EjercicioCalc;
-import java.util.Scanner;
 
 public class Calculadora {
         private double numero1;
